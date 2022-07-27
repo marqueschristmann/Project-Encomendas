@@ -5,6 +5,8 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Css } from '../../assets/Css/css';
 import config from '../../config/config.json'
+import * as Location from 'expo-location';
+import Geocoder from 'react-native-geocoding';
 
 export default function Edicao({navigation}) {
 
@@ -23,12 +25,22 @@ export default function Edicao({navigation}) {
         })();
     }, []);
 
+    useEffect(()=>{
+        (async () => {
+            let { status } = await Location.requestPermissionsAsync();
+            if (status !== 'granted') {
+                setErrorMsg('Permission to access location was denied');
+            }
+        })();
+    });
+
     //Leitura do código QR
     async function handleBarCodeScanned({ type, data }){
         setScanned(true);
         setDisplayQR('none');
         setDisplayForm('flex');
         setCode(data);
+        await getLocation();
         await searchProduct(data);
     }
     
@@ -49,6 +61,20 @@ export default function Edicao({navigation}) {
 
     async function sendForm() {
 
+    }
+
+        //Retorna a posição e endereço do usuário
+    async function getLocation()
+    {
+        let location = await Location.getCurrentPositionAsync({});
+        Geocoder.init(config.geocodingAPI);
+        Geocoder.from(location.coords.latitude, location.coords.longitude)
+            .then(json => {
+                let number = json.results[0].address_components[0].short_name;
+                let street = json.results[0].address_components[1].short_name;
+                setLocalization(`${street} - ${number}`);
+            })
+            .catch(error => console.warn(error));
     }
 
     return (
