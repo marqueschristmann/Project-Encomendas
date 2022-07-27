@@ -77,6 +77,19 @@ export default function Edicao({navigation}) {
             .catch(error => console.warn(error));
     }
 
+        //Nova leitura do QRCode
+    async function readAgain()
+    {
+        setScanned(false);
+        setDisplayQR('flex');
+        setDisplayForm('none');
+        setCode(null);
+        setProduct(null);
+        setLocalization(null);
+    }
+
+
+
     return (
         <View>
             <MenuAreaRestrita title='Edição' navigation={navigation} />
@@ -108,6 +121,14 @@ export default function Edicao({navigation}) {
                 <TouchableOpacity style={Css.login__button} onPress={()=>sendForm()}>
                     <Text>Atualizar</Text>
                 </TouchableOpacity>
+                {scanned &&
+                    <View>
+                        <Button style={Css.login__button}
+                                title='Escanear Novamente'
+                                onPress={()=>readAgain()}
+                        />
+                    </View>
+                }
             </View>
         </View>
     );

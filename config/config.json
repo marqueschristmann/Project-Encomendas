@@ -22,6 +22,6 @@
   },
   "urlRoot": "http://192.168.1.8:3000/",
   "origin": "Av. Prudente de morais, 200 - Natal / RN",
-  "geocodingAPI": "AIzaSyDIVP_LQUoRvIhO07e8TT8Lf3IEZOpgKVc"
+  "geocodingAPI": "... sua chave api"
 
 }
