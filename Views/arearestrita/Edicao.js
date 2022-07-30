@@ -17,6 +17,7 @@ export default function Edicao({navigation}) {
     const [code, setCode] = useState(null);
     const [product, setProduct] = useState(null);
     const [localization, setLocalization] = useState(null);
+    const [response, setResponse] = useState(null);
 
     useEffect(() => {
         (async () => {
@@ -59,8 +60,22 @@ export default function Edicao({navigation}) {
         setProduct(json.Products[0].name);
     }
 
+    //Envia o formulário com os dados para edição
     async function sendForm() {
-
+        let response=await fetch(config.urlRoot+'update',{
+        method: 'POST',
+        headers:{
+                Accept: 'application/json',
+            'Content-type':'application/json'
+        },
+            body: JSON.stringify({
+                code: code,
+                product: product,
+                local: localization
+            })
+        });
+        let json=await response.json();
+        setResponse(json);
     }
 
         //Retorna a posição e endereço do usuário
@@ -100,7 +115,7 @@ export default function Edicao({navigation}) {
             />
 
             <View style={Css.qr__form(displayForm)}>
-                <Text>Código do Produto: {code}</Text>
+                <Text>{response}</Text>
 
                 <View style={Css.login__input}>
                     <TextInput

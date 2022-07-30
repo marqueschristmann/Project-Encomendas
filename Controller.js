@@ -75,6 +75,20 @@ app.post('/searchProduct', async (req,res)=>{
     res.send(JSON.stringify(response));
 });
 
+//Update dos dados da mercadoria
+app.post('/update', async (req,res)=>{
+    let response=await tracking.findOne({
+        where: {code: req.body.code},
+        include: [{all:true}]
+    });
+    response.local=req.body.local;
+    response.updatedAt=new Date();
+    response.Products[0].name=req.body.product;
+    response.save();
+    response.Products[0].save();
+    res.send(JSON.stringify('Dados foram atualizados com sucesso!'));
+ });
+
 
 
 let port=process.env.PORT || 3000;
