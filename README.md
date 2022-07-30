@@ -2,6 +2,7 @@
 Sistema que Monitora Encomendas
 
 #instalar as dependencias
+
  npm install 
  yarn install 
  
