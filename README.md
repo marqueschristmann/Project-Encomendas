@@ -1,12 +1,12 @@
 # ProjectEncomendas
 Sistema que Monitora Encomendas
 
-# instalar as dependencias
+# instalar as dependencias do projeto
 
  npm install 
  yarn install 
  
- # Abrir dois terminais para rodas aplicação
+ # Abrir dois terminais para rodar aplicação
  
  rodar servidor do banco com comando abaixo em um terminal
  
