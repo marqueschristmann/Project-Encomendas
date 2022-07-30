@@ -3,6 +3,7 @@ import { KeyboardAvoidingView, TextInput, TouchableOpacity, Image, Text, View} f
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Css} from '../assets/Css/css';
 import config from '../config/config.json'
+import { Button } from 'react-native-paper';
 
 
 export default function Login({ navigation })
@@ -56,6 +57,7 @@ export default function Login({ navigation })
                 <TouchableOpacity style={Css.login__button} onPress={()=>sendForm()}>
                     <Text style={Css.login__buttonText}>Entrar</Text>
                 </TouchableOpacity>
+                <Button> hghj</Button>
             </View>
             <View>
             </View>

@@ -89,6 +89,18 @@ app.post('/update', async (req,res)=>{
     res.send(JSON.stringify('Dados foram atualizados com sucesso!'));
  });
 
+ //Exibir o local do rastreio
+app.post('/rastreio', async (req,res)=>{
+    let response=await tracking.findOne({
+        where:{code:req.body.code},
+        include:[{all:true}]
+    });
+    if(response === null){
+        res.send(JSON.stringify(`Nenhum produto encontrado`));
+    }else{
+        res.send(JSON.stringify(`Sua encomenda ${response.Products[0].name} já está a caminho ${response.local}.`))
+    }
+});
 
 
 let port=process.env.PORT || 3000;
