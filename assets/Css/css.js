@@ -29,6 +29,12 @@ const Css = StyleSheet.create({
       borderRadius: 30
       
     },
+    Imag1: { 
+      width:305,
+      height:260,
+      borderRadius: 30
+      
+    },
     darkbg:{
       backgroundColor:"#EFF259"
   },
@@ -110,7 +116,45 @@ const Css = StyleSheet.create({
     borderBottomWidth:1,
     paddingLeft:20,
     paddingRight: 20
-  }
+  },
+
+  container3: {
+    flex: 1,
+    backgroundColor: '#EFF259',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  Imag2: { 
+    width:305,
+    height:260,
+  },
+  Text1: {
+    color: '#C52B46',
+    fontSize: 30 ,
+  },
+  Text2: {
+    width:337,
+	  height:77,
+    margin:10,
+    color: '#171716',
+    fontSize: 16,
+
+  },
+  Inicio__button:{
+    padding: 12,
+    backgroundColor: "#F58634",
+    alignSelf:"center",
+    borderRadius:5,
+    margin:10,
+},
+Imag3: { 
+  width:100,
+  height:100,
+  marginRight: 20,
+  borderRadius: 30,
+  margin:10
+  
+},
 });
 
 export {Css};

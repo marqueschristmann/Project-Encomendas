@@ -13,8 +13,8 @@ export default function App() {
           <Stack.Screen name="Initial" component={Initial}
            options={{
            title:"Bem-Vindo",
-           headerStyle:{backgroundColor:"#EFF259"},
-           headerTintColor:'#333',
+           headerStyle:{backgroundColor:"#000"},
+           headerTintColor:'#fff',
            headerTitleStyle:{fontWeight:'bold', alignSelf:'center'}
        }}
            />
@@ -22,16 +22,16 @@ export default function App() {
            />
           <Stack.Screen name="Home" component={Home} 
             options={{
-              title:"Usuario",
-              headerStyle:{backgroundColor:"#EFF259"},
-              headerTintColor:'#333',
+              title:"Inicio",
+              headerStyle:{backgroundColor:"#000"},
+              headerTintColor:'#ffff',
               headerTitleStyle:{fontWeight:'bold', alignSelf:'center'}
           }}
           />
           <Stack.Screen name="Rastreio" component={Rastreio}
             options={{
-              headerStyle:{backgroundColor:"#EFF259"},
-              headerTintColor:'#333',
+              headerStyle:{backgroundColor:"#000"},
+              headerTintColor:'#fff',
               headerTitleStyle:{fontWeight:'bold', alignSelf:'center'}
           }}
            />

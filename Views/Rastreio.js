@@ -26,7 +26,7 @@ export default function Rastreio( { navigation } ){
 
     return (
         <View style={Css.container}>
-            <Image source={require('../assets/img/rastreio.png')} />
+            <Image style={Css.Imag1} source={require('../assets/img/ilustracao-do-conceito-abstrato-do-ponto-de-entrega_335657-3937.webp')} />
 
             <TextInput
                     placeholder='Digite o código de rastreio:'
