@@ -108,6 +108,7 @@ export default function Edicao({navigation}) {
     return (
         <View>
             <MenuAreaRestrita title='Edição' navigation={navigation} />
+            
 
             <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : value=>handleBarCodeScanned(value)}

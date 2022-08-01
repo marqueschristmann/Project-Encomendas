@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {Text, View, TextInput, TouchableOpacity} from 'react-native';
+import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 import { Css } from '../../assets/Css/css';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import MenuAreaRestrita from '../../assets/components/MenuAreaRestrita';
@@ -48,6 +48,9 @@ export default function Profile({navigation}) {
             <MenuAreaRestrita title='Perfil' navigation={navigation} />
 
             <View>
+                <Image style={Css.Imag1} source={require('../../assets/img/2020_03_26_envio_de_encomendas_pelo_correio_como_fazer_1.png')} />
+
+                <Text style={Css.Text1}> Recuperar Senha</Text>
                 <Text>{msg}</Text>
                 <TextInput placeholder='Senha Antiga:' onChangeText={text=>setSenhaAntiga(text)} />
                 <TextInput placeholder='Nova Senha:' onChangeText={text=>setNovaSenha(text)} />

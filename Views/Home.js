@@ -11,6 +11,7 @@ export default function Home({ navigation })
      <View style={Css.container}>
         
         <View style={Css.container3}>
+        <Image style={Css.Imag1} source={require('../assets/img/134313_entenda_o_que_e_compra_assistida_e_como_ela_funciona_1.png')}/>
          <Text style = {Css.Text1}> Rastreie suas encomendas em tempo real </Text>
          <TouchableWithoutFeedback onPress={() => navigation.navigate('Rastreio')}>
             <Image style={Css.Imag3} source={require('../assets/img/rastreio.png')}/>

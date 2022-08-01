@@ -73,7 +73,7 @@ const Css = StyleSheet.create({
     backgroundColor:"#EFF259",
     fontSize:20,
     fontWeight:"bold",
-    color:"#333"
+    color:"#171716"
   },
   area__menu:{
     flexDirection: 'row',

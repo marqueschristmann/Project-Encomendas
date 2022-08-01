@@ -3,6 +3,7 @@ import {Text, View, Button, Image, TextInput, TouchableOpacity} from 'react-nati
 import { Css } from '../assets/Css/css';
 import config from '../config/config.json'
 
+
 export default function Rastreio( { navigation } ){
     const [code, setCode] = useState(null);
     const [response, setResponse] = useState(null);
@@ -26,6 +27,7 @@ export default function Rastreio( { navigation } ){
 
     return (
         <View style={Css.container}>
+            <Text style={Css.Text1}>Area de Rastreio</Text>
             <Image style={Css.Imag1} source={require('../assets/img/ilustracao-do-conceito-abstrato-do-ponto-de-entrega_335657-3937.webp')} />
 
             <TextInput
