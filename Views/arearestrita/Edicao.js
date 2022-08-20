@@ -4,7 +4,8 @@ import MenuAreaRestrita from '../../assets/components/MenuAreaRestrita';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Css } from '../../assets/Css/css';
-import config from '../../config/config.json'
+import config from '../../Backend/config/config.json'
+import Fetch from 'react-native-fetch'
 import * as Location from 'expo-location';
 import Geocoder from 'react-native-geocoding';
 

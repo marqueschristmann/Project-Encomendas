@@ -3,7 +3,8 @@ import {Text, View, Image, Button, TextInput, TouchableOpacity} from 'react-nati
 import MenuAreaRestrita from '../../assets/components/MenuAreaRestrita';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Css } from '../../assets/Css/css';
-import config from '../../config/config.json'
+import config from '../../Backend/config/config.json'
+import Fetch from 'react-native-fetch'
 import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 

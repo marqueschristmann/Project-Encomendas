@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import { KeyboardAvoidingView, TextInput, TouchableOpacity, Image, Button, Text, View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Css} from '../assets/Css/css';
-import config from '../config/config.json'
+import config from '../Backend/config/config.json'
 
 
 

@@ -3,7 +3,8 @@ import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 import { Css } from '../../assets/Css/css';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import MenuAreaRestrita from '../../assets/components/MenuAreaRestrita';
-import config from '../../config/config.json'
+import config from '../../Backend/config/config.json'
+import Fetch from 'react-native-fetch'
 
 export default function Profile({navigation}) {
 

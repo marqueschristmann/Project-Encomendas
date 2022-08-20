@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import {Text, View, Button, Image, TextInput, TouchableOpacity} from 'react-native';
 import { Css } from '../assets/Css/css';
-import config from '../config/config.json'
-
+import config from '../Backend/config/config.json'
+import Fetch from 'react-native-fetch'
 
 export default function Rastreio( { navigation } ){
     const [code, setCode] = useState(null);

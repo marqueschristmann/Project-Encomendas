@@ -3,6 +3,8 @@ const cors=require('cors');
 const bodyParser=require('body-parser');
 const models=require('./models');
 const QRCode = require('qrcode');
+const {Expo} = require('expo-server-sdk');
+
 
 const app=express();
 app.use(cors());
@@ -10,10 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('assets'));
 
+
 let user=models.User;
 let tracking=models.Tracking;
 let product=models.Product;
 let token=models.Token;
+let expo = new Expo();
 
 
 app.post('/login',async (req,res)=>{
@@ -118,7 +122,11 @@ app.post('/token',async(req,res)=>{
     }
 });
 
-let port=process.env.PORT || 3000;
+
+
+
+
+let port=process.env.PORT || 8000;
 app.listen(port,(req,res)=>{
     console.log('Servidor Rodando');
 });
