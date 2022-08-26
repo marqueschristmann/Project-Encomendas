@@ -63,6 +63,7 @@ export default function Cadastro({navigation}) {
         setResponse(json);
     }
     //Compartilhar o QRCode
+    //Compartilhar o QRCode
     async function shareQR()
     {
         const image=config.urlRoot+'img/code.png';
@@ -75,12 +76,11 @@ export default function Cadastro({navigation}) {
         await Sharing.shareAsync();
     }
 
-
     return (
         <View style={[Css.container, Css.containerTop]}>
             <MenuAreaRestrita title='Cadastro' navigation={navigation} />
             <Text style={Css.Text1}>Cadastro de Produtos</Text>
-            <Image style={Css.Imag1} source={require('../../assets/img/r_1.png')} />
+            <Image style={Css.Imag1} source={require('../../assets/img/rastreioButton1.png')} />
             {response && (
                 <View>
                     <Image source={{uri:response, height:180, width:180}} />
@@ -89,13 +89,15 @@ export default function Cadastro({navigation}) {
             )}
             <View style={Css.login__input}>
                 <TextInput
-                        placeholder='Nome do Produto:'
+                        placeholder='Descrição do Produto:'
                         onChangeText={text=>setProduct(text)}
                         value={product}
+                        style={Css.inputBox}
                 />
             </View>
+
             <TouchableOpacity style={Css.login__button} onPress={()=>sendForm()}>
-                <Text>Cadastrar</Text>
+                <Text>Cadastrar nova encomenda</Text>
             </TouchableOpacity>
         </View>
     );

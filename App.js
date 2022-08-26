@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Login, Initial, Home, Rastreio} from './Views/routes/index';
+import { Login, Initial, Home, Rastreio, Cadastros} from './Views/routes/index';
 import AreaRestrita from "./Views/arearestrita/AreaRestrita";
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
@@ -84,6 +84,9 @@ export default function App() {
            />
           <Stack.Screen name="Login"  options={{headerShown:false}} component={Login}
            />
+            <Stack.Screen name="Cadastros"  options={{headerShown:false}} component={Cadastros}
+           />
+
           <Stack.Screen name="Home" component={Home} 
             options={{
               title:"Inicio",

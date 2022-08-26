@@ -19,33 +19,33 @@ let product=models.Product;
 let token=models.Token;
 let expo = new Expo();
 
-
-app.post('/login',async (req,res)=>{
-    let response=await user.findOne({
-        where:{name:req.body.name, password: req.body.password}
+app.post('/login', async (req,res)=>{
+    let response = await user.findOne({
+        where: {name:req.body.name, password:req.body.password}
     });
-    if(response === null){
+    console.log(response);
+    if(response === null)
+    {
         res.send(JSON.stringify('error'));
-    }else{
+    }
+    else
+    {
         res.send(response);
     }
 });
 
+//Cadastrar novo usuário
 app.post('/verifyPass',async (req,res)=>{
-    let response=await user.findOne({
-        where:{id:req.body.id, password: req.body.senhaAntiga}
-    });
-    if(response === null){
-        res.send(JSON.stringify('Senha antiga não confere'));
-    }else{
-        if(req.body. novaSenha === req.body.confNovaSenha){
-            response.password=req.body.novaSenha;
-            response.save();
-            res.send(JSON.stringify('Senha atualizada com sucesso!'));
+        if(req.body.novaSenha === req.body.confNovaSenha)
+        {
+            await user.create({
+                name: req.body.senhaAntiga,
+                password: req.body.novaSenha
+            });
+            res.send(JSON.stringify('Novo usuário criado com sucesso!'));
         }else{
-            res.send(JSON.stringify('Nova Senha e Confirmação não conferem!'));
+            res.send(JSON.stringify('A confirmação de senha falhou!'));
         }
-    }
 });
 
 //Criação do produto no banco
@@ -126,7 +126,7 @@ app.post('/token',async(req,res)=>{
 
 
 
-let port=process.env.PORT || 8000;
+let port=process.env.PORT || 3000;
 app.listen(port,(req,res)=>{
     console.log('Servidor Rodando');
 });

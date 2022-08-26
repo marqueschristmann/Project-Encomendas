@@ -14,14 +14,14 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "bcc4dd61399d0b",
-    "password": "b11c44fd",
-    "database": "heroku_926d2d60f6aed38",
-    "host": "us-cdbr-east-06.cleardb.net",
+    "username": "b533a636d76cae",
+    "password": "efe2d761",
+    "database": "heroku_adbb19cf08d63ef",
+    "host": "us-cdbr-east-03.cleardb.com",
     "dialect": "mysql"
   },
-  "urlRoot": "https://projectencomendas.herokuapp.com/",
+  "urlRoot": "http://192.168.1.6:3000/",
   "origin": "Av. Prudente de morais, 200 - Natal / RN",
-  "geocodingAPI": ""
+  "geocodingAPI": "AIzaSyATAXFaLoEJ5pT1YmvVc-szBpeHyM67RGw"
 
 }

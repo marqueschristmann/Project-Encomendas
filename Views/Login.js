@@ -5,7 +5,6 @@ import {Css} from '../assets/Css/css';
 import config from '../Backend/config/config.json'
 
 
-
 export default function Login({ navigation })
 {
     const [display, setDisplay]=useState('none');
@@ -40,11 +39,10 @@ export default function Login({ navigation })
     }
 
 
-
     return(
         <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={[Css.container, Css.darkbg]}>
             <View style={Css.login__logomarca}>
-                <Image style={Css.Imag} source={require('../assets/img/Logomarca.png')} />
+                <Image style={Css.Imag3} source={require('../assets/img/Logomarca.png')} />
             </View>
 
             <View>
@@ -57,7 +55,10 @@ export default function Login({ navigation })
                 <TouchableOpacity style={Css.login__button} onPress={()=>sendForm()}>
                     <Text style={Css.login__buttonText}>Entrar</Text>
                 </TouchableOpacity>
+                <Text  onPress={() => navigation.navigate('Cadastros')} style={Css.Inicio__button} > Cadastro </Text>
+                <Text onPress={() => navigation.navigate('Initial')} style={Css.Inicio} > -- BACK -- </Text>
             </View>
+
             <View>
             </View>
         </KeyboardAvoidingView>

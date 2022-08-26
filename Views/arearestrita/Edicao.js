@@ -107,46 +107,48 @@ export default function Edicao({navigation}) {
 
 
     return (
-        <View>
-            <MenuAreaRestrita title='Edição' navigation={navigation} />
-            
+        <View style={[Css.container, Css.containerTop]}>
+        <MenuAreaRestrita title='Edição' navigation={navigation} />
+        <BarCodeScanner
+                onBarCodeScanned={scanned ? undefined : value=>handleBarCodeScanned(value)}
+            style={Css.qr__code(displayQR)}
+        />
+        <View style={Css.qr__form(displayForm)}>
+            <Text>{response}</Text>
+            <Text style={Css.Text1} > Codigo do Produto:</Text>
 
-            <BarCodeScanner
-                    onBarCodeScanned={scanned ? undefined : value=>handleBarCodeScanned(value)}
-                style={Css.qr__code(displayQR)}
-            />
-
-            <View style={Css.qr__form(displayForm)}>
-                <Text>{response}</Text>
-
-                <View style={Css.login__input}>
-                    <TextInput
-                            placeholder='Nome do Produto:'
-                            onChangeText={text=>setProduct(text)}
+            <Text style={Css.sucess__text}>{response}</Text>
+            <View style={Css.login__input}>
+                <TextInput
+                        placeholder='Código do produto:'
+                        onChangeText={text=>setProduct(text)}
                         value={product}
-                    />
-                </View>
-
-                <View style={Css.login__input}>
-                    <TextInput
-                            placeholder='Localização do Produto:'
-                            onChangeText={text=>setLocalization(text)}
-                        value={localization}
-                    />
-                </View>
-
-                <TouchableOpacity style={Css.login__button} onPress={()=>sendForm()}>
-                    <Text>Atualizar</Text>
-                </TouchableOpacity>
-                {scanned &&
-                    <View>
-                        <Button style={Css.login__button}
-                                title='Escanear Novamente'
-                                onPress={()=>readAgain()}
-                        />
-                    </View>
-                }
+                        style={Css.inputBox}
+                />
             </View>
+
+            <Text style={Css.Text1} > Localização do Produto:</Text>
+            <View style={Css.login__input}>
+                <TextInput
+                        placeholder='Localização do Produto:'
+                        onChangeText={text=>setLocalization(text)}
+                        value={localization}
+                        style={Css.inputBox}
+                />
+            </View>
+
+            <TouchableOpacity style={Css.login__button} onPress={()=>sendForm()}>
+                <Text>Atualizar</Text>
+            </TouchableOpacity>
+            {scanned &&
+                <View style={Css.login__input}>
+                    <Button style={Css.login__button} color={'#000'}
+                            title='Escanear Novamente'
+                            onPress={()=>readAgain()}
+                    />
+                </View>
+            }
         </View>
+    </View>
     );
 }
