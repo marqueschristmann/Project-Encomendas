@@ -30,7 +30,7 @@ Sistema que Monitora Encomendas
   },
   "urlRoot": "https://apptrackit.herokuapp.com/",
   "origin": "Av. Prudente de morais, 200 - Natal / RN",
-  "geocodingAPI": "AIzaSyATAXFaLoEJ5pT1YmvVc-szBpeHyM67RGw"
+  "geocodingAPI": 
 
   # caso ultilize alterar para developer localhost
 
