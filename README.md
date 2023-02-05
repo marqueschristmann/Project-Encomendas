@@ -1,16 +1,18 @@
-# ProjectEncomendas
-Sistema que Monitora Encomendas
+# ProjectEncomendas💻
+Sistema que Monitora Encomendas Iniciando estudos React native
 
-# instalar as dependencias do projeto<h2>
+# instalar as dependencias do projeto
 
  npm install 
  yarn install 
  
- rodar servidor do banco com comando abaixo em um terminal
+ Para rodar servidor execute o comando abaixo em um terminal, ele está
+ no conrtroller por que foi somente para estudos eu estou ciente que o certo
+ seria colocar em um arquivo index para o servidor node por questões de boas praticas.😎
  
- nodemon Controller.js
+ nodemon Controller.js✔
  
- npm start ou expor start.
+ npm start ou expor start.✔
  
  
  # Alterar o index da pasta models de para produção pois esta em localhost
