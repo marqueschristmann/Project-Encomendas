@@ -2,7 +2,7 @@
 Sistema que Monitora Encomendas Iniciando estudos React Native com Node.js
 🐱‍🚀
 
-# instalar as dependencias do projeto
+# instalar as dependencias do projeto👍
 
  npm install  ou
  yarn install 
