@@ -1,5 +1,5 @@
 # ProjectEncomendas💻
-Sistema que Monitora Encomendas Iniciando estudos React native com Node.js
+Sistema que Monitora Encomendas Iniciando estudos React Native com Node.js
 🐱‍🚀
 
 # instalar as dependencias do projeto
@@ -16,7 +16,8 @@ Sistema que Monitora Encomendas Iniciando estudos React native com Node.js
  npm start ou expor start.✔
  
  
- # Alterar o index da pasta models de produção para development
+ # Alterar o index da pasta models de produção para development🐱‍👤
+ 
   {
   "development": {
     "username": "root",
