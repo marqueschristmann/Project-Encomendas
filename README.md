@@ -1,5 +1,6 @@
 # ProjectEncomendas💻
-Sistema que Monitora Encomendas Iniciando estudos React native
+Sistema que Monitora Encomendas Iniciando estudos React native com Node.js
+🐱‍🚀
 
 # instalar as dependencias do projeto
 
@@ -15,9 +16,7 @@ Sistema que Monitora Encomendas Iniciando estudos React native
  npm start ou expor start.✔
  
  
- # Alterar o index da pasta models de para produção pois esta em localhost
-  depreferencia testa em localhost pós não consegui fazer o repositorio do heroku
-  acredito que esse esta  funcionando po padrão va vir em em developer.
+ # Alterar o index da pasta models de produção para development
   {
   "development": {
     "username": "root",
@@ -29,9 +28,3 @@ Sistema que Monitora Encomendas Iniciando estudos React native
   "origin": "Av. Prudente de morais, 200 - Natal / RN",
   "geocodingAPI":
  
-# usuarios padrões
-nome :marques
-senha :123
-
-nome: gustavo
-senha: 123
