@@ -29,7 +29,7 @@ Sistema que Monitora Encomendas Iniciando estudos React native
   "origin": "Av. Prudente de morais, 200 - Natal / RN",
   "geocodingAPI":
  
-# A do banco vai esta aqui caso vc queira rodar local usuarios padrões
+# usuarios padrões
 nome :marques
 senha :123
 
