@@ -4,7 +4,7 @@ Sistema que Monitora Encomendas Iniciando estudos React native com Node.js
 
 # instalar as dependencias do projeto
 
- npm install 
+ npm install  ou
  yarn install 
  
  Para rodar servidor execute o comando abaixo em um terminal, ele está
