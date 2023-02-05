@@ -1,12 +1,10 @@
 # ProjectEncomendas
 Sistema que Monitora Encomendas
 
-# instalar as dependencias do projeto
+<h2>instalar as dependencias do projeto<h2>
 
  npm install 
  yarn install 
- 
- # Abrir dois terminais para rodar aplicação
  
  rodar servidor do banco com comando abaixo em um terminal
  
@@ -43,10 +41,7 @@ Sistema que Monitora Encomendas
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  
-  # A do banco vai esta aqui caso vc queira rodar local
-  usuarios padrões
-
+# A do banco vai esta aqui caso vc queira rodar local usuarios padrões
 nome :marques
 senha :123
 
