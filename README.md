@@ -1,20 +1,24 @@
-ProjectEncomendas 💻
-Sistema que Monitora Encomendas | Iniciando estudos React Native com Node.js 🐱‍🚀
+# ProjectEncomendas 💻
 
-Descrição
-O ProjectEncomendas é um sistema para monitoramento de encomendas, desenvolvido como um projeto de estudo para a combinação de React Native com Node.js. O projeto visa fornecer uma base para o desenvolvimento de aplicações móveis e de backend, explorando as melhores práticas em programação e arquitetura de software.
+**Sistema que Monitora Encomendas** | Iniciando estudos React Native com Node.js 🐱‍🚀
 
-Tecnologias Utilizadas
-Frontend: React Native
-Backend: Node.js
-Banco de Dados: MySQL
-Gerenciamento de Dependências: npm ou yarn
-Ferramenta de Desenvolvimento: Nodemon
-Instalação das Dependências
+## Descrição
+
+O *ProjectEncomendas* é um sistema para monitoramento de encomendas, desenvolvido como um projeto de estudo para a combinação de **React Native** com **Node.js**. O projeto visa fornecer uma base para o desenvolvimento de aplicações móveis e de backend, explorando as melhores práticas em programação e arquitetura de software.
+
+## Tecnologias Utilizadas
+
+- **Frontend:** React Native
+- **Backend:** Node.js
+- **Banco de Dados:** MySQL
+- **Gerenciamento de Dependências:** npm ou yarn
+- **Ferramenta de Desenvolvimento:** Nodemon
+
+## Instalação das Dependências
+
 Para instalar as dependências do projeto, execute um dos seguintes comandos:
 
-bash
-Copiar código
+```bash
 npm install
 ou
 
@@ -58,16 +62,27 @@ Copiar código
 Substitua "SUA_API_KEY_AQUI" pela sua chave de API para o serviço de geocodificação, se aplicável.
 
 Estrutura do Projeto
-Controller.js: Arquivo principal para execução do servidor (para fins de estudo).
-models/: Contém a configuração do banco de dados e os modelos de dados.
-routes/: Define as rotas da aplicação.
-views/: Contém os componentes de visualização do frontend.
+bash
+Copiar código
+ProjectEncomendas/
+│
+├── Controller.js          # Arquivo principal para execução do servidor (para fins de estudo).
+├── models/                # Contém a configuração do banco de dados e os modelos de dados.
+│   ├── config.json       # Configurações do banco de dados e chave de API
+│   ├── index.js          # Configuração da conexão com o banco de dados
+│   └── models.js         # Modelos de dados
+│
+├── routes/                # Define as rotas da aplicação.
+│   ├── index.js          # Definições de rotas
+│
+├── views/                 # Contém os componentes de visualização do frontend.
+│   ├── App.js            # Componente principal do aplicativo
+│   └── components/      # Componentes reutilizáveis
+│
+├── .gitignore             # Arquivos e pastas a serem ignorados pelo Git
+├── README.md              # Este arquivo
+├── package.json          # Dependências e scripts do projeto
+├── yarn.lock             # Dependências do projeto (caso use Yarn)
+└── .env                  # Arquivo para variáveis de ambiente (crie este arquivo com as variáveis necessárias)
 Contribuição
 Sinta-se à vontade para contribuir com o projeto! Para isso, siga estas etapas:
-
-Faça um fork do repositório.
-Crie uma branch para suas alterações (git checkout -b minha-branch).
-Faça commit das suas alterações (git commit -am 'Adiciona uma nova feature').
-Envie suas alterações para o repositório (git push origin minha-branch).
-Abra um pull request.
-Licença
